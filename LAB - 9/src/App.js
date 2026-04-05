@@ -1,41 +1,16 @@
-// App.js
 import React from "react";
+import StudentProfile from "./components/StudentProfile";
+import Counter from "./components/Counter";
 
-function StudentProfile() {
-
-  const students = [
-    { name: "Rahul Kumar", department: "CSE", year: "3rd", section: "A" },
-    { name: "Anjali Sharma", department: "ECE", year: "2nd", section: "B" },
-    { name: "Kiran Reddy", department: "ME", year: "4th", section: "C" },
-    { name: "Priya Singh", department: "IT", year: "1st", section: "A" },
-    { name: "Arjun Verma", department: "EEE", year: "3rd", section: "B" }
-  ];
-
+function App() {
   return (
-    <div style={{ textAlign: "center" }}>
-      <h1>Student Profiles</h1>
+    <div>
+      <h1>React Lab Exercises</h1>
 
-      {students.map((student, index) => (
-        <div style={styles.card} key={index}>
-          <h3>{student.name}</h3>
-          <p>Department: {student.department}</p>
-          <p>Year: {student.year}</p>
-          <p>Section: {student.section}</p>
-        </div>
-      ))}
-
+      <StudentProfile />
+      <Counter />
     </div>
   );
 }
 
-const styles = {
-  card: {
-    border: "1px solid gray",
-    padding: "15px",
-    margin: "10px auto",
-    width: "250px",
-    borderRadius: "10px"
-  }
-};
-
-export default StudentProfile;
+export default App;
